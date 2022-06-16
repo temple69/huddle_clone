@@ -1,0 +1,221 @@
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        header {
+            background: url('./images/bg-hero-desktop.svg') aliceblue;
+            padding: 0 5%;
+            height: max-content;
+            background-size: contain;
+            padding-bottom: 5em;
+            margin-bottom: 4em;
+            background-blend-mode: darken;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 3em 0;
+            gap: 1em;
+        }
+        
+        nav ul li button {
+            background-color: white;
+            border: none;
+            box-shadow: 2px 2px 4px 2px grey;
+            height: 40px;
+            border-radius: 30px;
+            padding: 0 3em;
+        }
+        
+        .first_con {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3em;
+            align-items: center;
+        }
+        
+        main>div {
+            width: 60%;
+            box-shadow: 2px 6px 8px 2px inset grey;
+            position: relative;
+            top: 5em;
+            background-color: white;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 10px;
+            padding: 3.5em 1%;
+        }
+        
+        main>div h2 {
+            width: 100%;
+            margin-bottom: .4em;
+            font-size: 1.5em;
+            font-family: 'Poppins', sans-serif;
+            padding: 1em;
+        }
+        
+        .first_con div>img,
+        .grid_con>div>img {
+            width: 100%;
+            height: 50vmin;
+        }
+        
+        .first_con div>p {
+            width: 100%;
+            padding: 1.5em 0;
+        }
+        
+        .anime {
+            width: 60%;
+            padding: 1em;
+            background-color: hsl(322, 100%, 66%);
+            color: hsl(193, 100%, 96%);
+            font-weight: bold;
+            border-radius: 30px;
+            border: none;
+            animation: bounce .8s ease-in-out infinite forwards;
+            transform: scale(1);
+            transition: all .5s;
+        }
+        
+        .anime:hover {
+            background-color: orange;
+            cursor: pointer;
+            box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, .5);
+        }
+        
+        .anime:active {
+            background-color: orange;
+            cursor: pointer;
+            opacity: .5;
+        }
+        
+        .grid_con {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            align-items: center;
+            margin: 0 5%;
+            box-shadow: 2px 6px 8px 2px inset grey;
+            margin-top: 2em;
+            padding: 2em 4%;
+            border-radius: 10px;
+            gap: 3em;
+        }
+        
+        .grid_con>div>p {
+            width: 95%;
+        }
+        
+        footer {
+            background-color: hsl(192, 100%, 9%);
+            padding: 8em 2em;
+            color: rgb(232, 216, 216);
+        }
+        
+        footer>p {
+            text-align: right;
+            margin-top: 3em;
+        }
+        
+        footer section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            align-items: center;
+            column-gap: 4%;
+        }
+        
+        .flex {
+            display: flex;
+            gap: 1em;
+            margin: 2em 0;
+        }
+        
+        .flex img {
+            height: 20px;
+        }
+        
+        .flex p {
+            width: 80%;
+        }
+        
+        .footer_links ul {
+            list-style: none;
+        }
+        
+        .footer_links ul li {
+            padding-bottom: 2.3em;
+        }
+        
+        .footer_links ul li a {
+            color: rgb(232, 216, 216);
+            text-decoration: none;
+        }
+        
+        .footer_images ul {
+            display: flex;
+            list-style: none;
+            margin-bottom: 8em;
+        }
+        
+        .footer_images ul li {
+            border: 1px solid white;
+            border-radius: 50%;
+            margin: 0 .5em;
+        }
+        
+        .footer_images img {
+            width: 30px;
+            height: 30px;
+            margin: .5em;
+        }
+        
+        @keyframes bounce {
+            from {
+                transform: scale(1.1);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        @media screen and (max-width:375px) {
+            .grid_con {
+                row-gap: 4em;
+                margin: 2em .5em;
+            }
+            footer section {
+                row-gap: 1em;
+                margin: 0;
+            }
+            header {
+                background: url('./images/bg-hero-mobile.svg') aliceblue;
+                padding: 0 3%;
+            }
+            footer {
+                padding: 8em .6em;
+            }
+            footer p {
+                text-align: center;
+            }
+        }
+        /*style guides colors
+Very Pale Cyan: hsl(193, 100%, 96%)
+- Very Dark Cyan: hsl(192, 100%, 9%)
+- Grayish Blue: hsl(208, 11%, 55%)
+Pink: hsl(322, 100%, 66%)*
+heading:font-family: 'Poppins', sans-serif;
+body:font-family: 'Open Sans', sans-serif;*/
